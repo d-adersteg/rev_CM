@@ -17,6 +17,16 @@ function createBaseFolder() {
  * Placeholder function for Jules to expand.
  */
 function generateReport() {
-  // Jules will add logic here to create a file inside the folder
-  Logger.log("Report generation not yet implemented.");
+  const folderId = createBaseFolder();
+  if (folderId) {
+    try {
+      const folder = DriveApp.getFolderById(folderId);
+      const fileName = 'Jules_Report.txt';
+      const fileContent = 'Jules successfully updated this script at ' + new Date();
+      folder.createFile(fileName, fileContent);
+      Logger.log(`Successfully created file '${fileName}' in folder '${folder.getName()}'.`);
+    } catch (err) {
+      Logger.log('Failed to create file: ' + err.message);
+    }
+  }
 }
