@@ -1,0 +1,1325 @@
+{
+    "table_name": "risk.risk_issues",
+    "purpose": "Metadata documentation for AI-assisted SQL generation",
+    "filter_applied": "None",
+    "fields": [
+        {
+            "name": "id",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "issue_state",
+            "type": "varchar",
+            "sample_values": [
+                "resolved",
+                "invalid",
+                "remediation_in_progress",
+                "remediation_review",
+                "validation"
+            ]
+        },
+        {
+            "name": "report_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "created_date",
+            "type": "timestamp(6) with time zone",
+            "sample_values": [
+                "2025-07-14 20:33:58.779000+00:00",
+                "2026-01-15 17:51:51.942089+00:00",
+                "2025-02-25 14:50:38.646996+00:00",
+                "2025-06-02 18:08:22.020000+00:00",
+                "2023-03-10 09:28:38.342185+00:00"
+            ]
+        },
+        {
+            "name": "updated_date",
+            "type": "timestamp(6) with time zone",
+            "sample_values": [
+                "2025-10-30 13:38:38.211377+00:00",
+                "2025-10-30 13:38:18.707906+00:00",
+                "2025-10-30 13:38:10.802742+00:00",
+                "2025-10-30 13:37:52.411342+00:00",
+                "2025-10-30 13:37:39.810935+00:00"
+            ]
+        },
+        {
+            "name": "assignee_email",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "remediation_due_date",
+            "type": "timestamp(6) with time zone",
+            "sample_values": [
+                "NaT",
+                "2026-03-31 20:00:00+00:00",
+                "2025-12-31 20:00:00+00:00",
+                "2025-03-31 00:00:00+00:00",
+                "2024-12-31 00:00:00+00:00"
+            ]
+        },
+        {
+            "name": "additional_risk_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "additional_risk_type_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "cause_categories",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "[75]",
+                "[22]",
+                "[80]",
+                "[53]"
+            ]
+        },
+        {
+            "name": "confidential",
+            "type": "boolean",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "description",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "entities",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "[1]",
+                "[1, 23]",
+                "[2]",
+                "[6]"
+            ]
+        },
+        {
+            "name": "control_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "impact",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "{'regulator': 'low'}",
+                "{'employee': 'low'}",
+                "{'customer': 'low'}",
+                "{'financial': 'low'}"
+            ]
+        },
+        {
+            "name": "impact_value_revision_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "model_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "product_relations",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "[]",
+                "[403]",
+                "[3]",
+                "[3, 255]"
+            ]
+        },
+        {
+            "name": "reporter",
+            "type": "varchar",
+            "sample_values": [
+                "caitlin.harris@revolut.com",
+                "mahesh.pokkali@revolut.com",
+                "paula.wesolowska@revolut.com",
+                "long.pham@revolut.com",
+                "ali.muqeem@revolut.com"
+            ]
+        },
+        {
+            "name": "reporting_date",
+            "type": "timestamp(6) with time zone",
+            "sample_values": [
+                "2023-09-05 11:04:02.729356+00:00",
+                "2023-12-06 12:26:03.274417+00:00",
+                "2023-06-13 18:52:13.693022+00:00",
+                "2023-12-15 11:52:53.820788+00:00",
+                "2023-10-06 14:46:01.393744+00:00"
+            ]
+        },
+        {
+            "name": "resolution_date",
+            "type": "timestamp(6) with time zone",
+            "sample_values": [
+                "NaT",
+                "2025-02-25 09:07:33.048597+00:00",
+                "2023-08-31 19:19:08.519000+00:00",
+                "2025-07-19 11:53:34.017000+00:00",
+                "2023-03-29 15:37:43.198424+00:00"
+            ]
+        },
+        {
+            "name": "responsible_department_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "responsible_team_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "risk_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "risk_type_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "root_cause",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "[{'type': 'p', 'children': [{'text': ''}]}]",
+                "[{'id': 'tC9ca5_MfY', 'type': 'p', 'children': [{'text': \"The Pan-European AML Action Plan's strategic objective is to establish a \"}, {'bold': True, 'text': 'resilient and harmonized AML/CTF compliance infrastructure'}, {'text': ' that proactively meets regulatory expectations '}, {'bold': True, 'text': 'across all EEA jurisdictions'}, {'text': '. The plan integrates EU-wide enhancements from supervisory inspections, incorporates relevant tasks from the ACPR Action and Remediation plan, and addresses additional EU-wide AML/CTF priorities for Revolut.'}]}]",
+                "[{'type': 'p', 'children': [{'text': 'TBD'}]}]",
+                "[{'type': 'p', 'children': [{'text': 'TBC'}]}]"
+            ]
+        },
+        {
+            "name": "service_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "severity",
+            "type": "varchar",
+            "sample_values": [
+                "LOW",
+                "MEDIUM",
+                "HIGH",
+                "CRITICAL",
+                "Sev 1"
+            ]
+        },
+        {
+            "name": "severity_comments",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Rating as agreed in the CA report",
+                " ",
+                "Likelihood not covered in severity calculation",
+                "High rated observation from Advisory Review"
+            ]
+        },
+        {
+            "name": "severity_override",
+            "type": "boolean",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "summary",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "team_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "vendor_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "vendor_relation_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "reviewer_uuid",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "business_owner_uuid",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "control_enhancement_plan",
+            "type": "boolean",
+            "sample_values": [
+                null,
+                false,
+                true
+            ]
+        },
+        {
+            "name": "governance_tier",
+            "type": "varchar",
+            "sample_values": [
+                "TIER_2",
+                "TIER_1"
+            ]
+        },
+        {
+            "name": "is_remediation_enabled",
+            "type": "boolean",
+            "sample_values": [
+                false,
+                true,
+                null
+            ]
+        },
+        {
+            "name": "standard_risk_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "validator_uuid",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "success_criteria",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "[{'id': 'MAn0pAP8pr', 'type': 'p', 'children': [{'text': 'Complete all actions listed below'}]}]",
+                "[{'type': 'p', 'children': [{'text': 'To complete this finding ensure all actions items are delivered on time'}]}]",
+                "[{'type': 'p', 'children': [{'text': 'At audit finding level, the completion of remediation of all agreed management actions.'}]}]",
+                "[{'id': 'EGq64dU7vC', 'type': 'p', 'children': [{'text': 'Remediation of all actions is the success criterium.'}]}]"
+            ]
+        },
+        {
+            "name": "linked_incident_id",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "validation_due_date",
+            "type": "timestamp(6) with time zone",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "closure_evidence_file_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "closure_evidence",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "related_fincrime_link",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "remediation_next_steps",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Follow the roadmap to complete the necessary implementations to resolve issues surrounding ineffective alert parameters. The main one currently being the trading ahead of price.",
+                "It will require implementation. Targeting Q4 for completion.",
+                "QC team to implement new queries",
+                "Procedure to be published. Pending GAMF meeting as FCREQ for changes noted but needs to be officially closed after the GAMF meeting. "
+            ]
+        },
+        {
+            "name": "remediation_due_date_updated_date",
+            "type": "timestamp(6) with time zone",
+            "sample_values": [
+                "NaT",
+                "2026-01-30 10:08:16.230644+00:00",
+                "2025-09-25 08:37:46.399455+00:00",
+                "2025-10-06 11:00:04.440791+00:00",
+                "2025-09-01 22:58:15.007658+00:00"
+            ]
+        },
+        {
+            "name": "label_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "status_sla_due_date",
+            "type": "timestamp(6) with time zone",
+            "sample_values": [
+                "NaT",
+                "2025-10-06 14:34:21+00:00",
+                "2025-03-11 11:43:26+00:00",
+                "2025-07-07 16:10:19+00:00",
+                "2026-02-02 17:51:22+00:00"
+            ]
+        },
+        {
+            "name": "issue_type",
+            "type": "varchar",
+            "sample_values": [
+                "SELF_IDENTIFIED",
+                "INTERNAL_AUDIT",
+                "COMPLIANCE_ASSURANCE",
+                "EXTERNAL_AUDIT"
+            ]
+        },
+        {
+            "name": "issue_folder_id",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "product_asset_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "service_component_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "primary_risk",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "[3027] The risk of unreconciled transactions and accounts",
+                "[2549] The risk of non-compliance with regulatory requirements",
+                "[3014] The risk due to ICT Change Management causing business disruption or control failure",
+                "[2862] The risk of failing to comply with client assets protection regulatory requirements"
+            ]
+        },
+        {
+            "name": "risks",
+            "type": "varchar",
+            "sample_values": [
+                "",
+                "[3027] The risk of unreconciled transactions and accounts",
+                "[3014] The risk due to ICT Change Management causing business disruption or control failure",
+                "[7369] The risks arising from failure to establish strong governance to oversee the execution of strategic plans, including processes around determining goals, creating tactics and monitoring results",
+                "[2549] The risk of non-compliance with regulatory requirements"
+            ]
+        },
+        {
+            "name": "primary_risk_type_l1",
+            "type": "varchar",
+            "sample_values": [
+                "Operational Risk",
+                "Regulatory Compliance Risk",
+                "Financial Crime Risk",
+                "Conduct and Culture Risk",
+                null
+            ]
+        },
+        {
+            "name": "primary_risk_type_l2",
+            "type": "varchar",
+            "sample_values": [
+                "Regulatory Obligations Risk",
+                null,
+                "Regulatory Compliance Risk (Other)",
+                "Information Security Risk",
+                "AML & CTF"
+            ]
+        },
+        {
+            "name": "risk_types",
+            "type": "varchar",
+            "sample_values": [
+                "Regulatory Compliance Risk : Regulatory Obligations Risk",
+                "Financial Crime Risk : AML & CTF",
+                null,
+                "Operational Risk : Product and Service Failure Risk",
+                "Operational Risk : Information Security Risk"
+            ]
+        },
+        {
+            "name": "controls",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "[17197] TP Ops - Third Party SLA Monitoring ",
+                "[15534] [Local Entity-NIAP] UK Bank Head of Product New Initiatives Approval Process Conduct Review",
+                "[12981] [FinCrime] Customer Risk Assessment Model [Customer Risk Assessment Model]",
+                "[19924] IT-GOV - Technology policies, procedure and supporting documentation - RBUAB"
+            ]
+        },
+        {
+            "name": "impacted_entities",
+            "type": "varchar",
+            "sample_values": [
+                "Revolut Ltd",
+                "Revolut Bank UAB",
+                "Revolut Group Holdings Ltd",
+                null,
+                "Revolut Ltd,Revolut NewCo UK Ltd"
+            ]
+        },
+        {
+            "name": "cause_category_l1",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Process",
+                "People",
+                "System",
+                "External"
+            ]
+        },
+        {
+            "name": "cause_category_l2",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Design",
+                "Other",
+                "Process gaps",
+                "Data"
+            ]
+        },
+        {
+            "name": "cause_category_l3",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "",
+                "Other",
+                "Inadequate policies, procedures, and documentation",
+                "Problem statement"
+            ]
+        },
+        {
+            "name": "cause_types",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Inadequate policies, procedures, and documentation (Process)",
+                "Design (Process)",
+                "Other (Process)",
+                "Other (System)"
+            ]
+        },
+        {
+            "name": "products",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Financial Crime",
+                "Retail FX",
+                "Business Account,Retail FX",
+                "Business Account"
+            ]
+        },
+        {
+            "name": "services",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "ICT Security Management Services: Identity & Access Management",
+                "External Responses: External Authority Enquiries & Investigations | FinCrime \u00b7 External Enquiries \u00b7 Core LOB",
+                "Customer Due Diligence: Customer Due Diligence [Know Your Business (KYB)]",
+                "Customer Due Diligence: Customer Due Diligence [Identity Verification & Anti Money Laundrying (AML)] | FinCrime \u00b7 CDD \u00b7 Core"
+            ]
+        },
+        {
+            "name": "product_assets",
+            "type": "varchar",
+            "sample_values": [
+                null
+            ]
+        },
+        {
+            "name": "service_components",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Identity & Access Management",
+                "Support | Support \u00b7 Retail \u00b7 Core",
+                "External Authority Enquiries & Investigations | FinCrime \u00b7 External Enquiries \u00b7 Core LOB",
+                "Customer Due Diligence [Know Your Business (KYB)]"
+            ]
+        },
+        {
+            "name": "assignee",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Mahesh Pokkali",
+                "Christopher Saunders",
+                "Joshua James Chapman",
+                "Hala Shalaby"
+            ]
+        },
+        {
+            "name": "assignee_team",
+            "type": "varchar",
+            "sample_values": [
+                "Services \u00b7 FinCrime \u00b7 Risk Management",
+                null,
+                "Services \u00b7 CX \u00b7 Risk",
+                "Service \u00b7 Business \u00b7 Risk",
+                "Services \u00b7 Finance \u00b7 Internal Control"
+            ]
+        },
+        {
+            "name": "assignee_department",
+            "type": "varchar",
+            "sample_values": [
+                "Europe Bank",
+                "FinCrime Product",
+                "Finance",
+                "Information Security",
+                "CX"
+            ]
+        },
+        {
+            "name": "reporter_name",
+            "type": "varchar",
+            "sample_values": [
+                "Caitlin Louise Harris",
+                "Mahesh Pokkali",
+                "Paula Weso\u0142owska",
+                "Long Pham",
+                "Muhammad Ali"
+            ]
+        },
+        {
+            "name": "reporter_team",
+            "type": "varchar",
+            "sample_values": [
+                "Services \u00b7 Regulatory Compliance \u00b7 Group Reg Compliance Assurance",
+                "Services \u00b7 Audit \u00b7 FinCrime",
+                "Services \u00b7 Audit \u00b7 Finance and Financial Risk",
+                "Services \u00b7 CX \u00b7 Risk",
+                "Services \u00b7 FinCrime Compliance \u00b7 Group FCC Assurance"
+            ]
+        },
+        {
+            "name": "reporter_department",
+            "type": "varchar",
+            "sample_values": [
+                "Audit",
+                "Europe Bank",
+                "Regulatory Compliance",
+                "Business Risk & Resilience",
+                "FinCrime Compliance"
+            ]
+        },
+        {
+            "name": "responsible_team",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Product \u00b7 FinCrime \u00b7 Monitoring & Reporting \u00b7 Screening",
+                "Services \u00b7 Europe Bank \u00b7 FinCrime \u00b7 Core",
+                "Services \u00b7 Europe Bank \u00b7 Technology \u00b7 Core",
+                "Services \u00b7 Technology \u00b7 Core"
+            ]
+        },
+        {
+            "name": "responsible_department",
+            "type": "varchar",
+            "sample_values": [
+                "Europe Bank",
+                "FinCrime Product",
+                "Finance",
+                "Technology",
+                "People Operations"
+            ]
+        },
+        {
+            "name": "reviewer_email",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "reviewer",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Nikola Emilov Dandolov",
+                "Ross Evans",
+                "Lisa Curtin",
+                "Clara Cruz Guti\u00e9rrez"
+            ]
+        },
+        {
+            "name": "reviewer_team",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Services \u00b7 Risk \u00b7 Tech risk oversight",
+                "Services \u00b7 Risk \u00b7 People and Third Parties risk",
+                "Services \u00b7 Business Risk & Resilience \u00b7 First Line Risk",
+                "Services \u00b7 Europe Bank \u00b7 Risk \u00b7 Operational Risk"
+            ]
+        },
+        {
+            "name": "reviewer_department",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Risk",
+                "Regulatory Compliance",
+                "Europe Bank",
+                "Business Risk & Resilience"
+            ]
+        },
+        {
+            "name": "validator_email",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "validator",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "validator_team",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "validator_department",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "standard_risk",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "The risk of non-compliance with regulatory requirements",
+                "The risk that Revolut does not properly monitor or enforce SLAs or performance causing detriment to Revolut and/or its customers",
+                "The risk that Revolut fails to establish compliant data lifecycle management processes across international jurisdictions, specifically data retention and deletion.",
+                "The risk that information or communication is incorrect, unclear or misleading"
+            ]
+        },
+        {
+            "name": "impact_media",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "low",
+                "medium",
+                "high",
+                ""
+            ]
+        },
+        {
+            "name": "impact_customer",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "low",
+                "medium",
+                "high",
+                "critical"
+            ]
+        },
+        {
+            "name": "impact_employee",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "low",
+                "medium",
+                "high",
+                ""
+            ]
+        },
+        {
+            "name": "impact_financial",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "low",
+                "medium",
+                "high",
+                "critical"
+            ]
+        },
+        {
+            "name": "impact_regulator",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "low",
+                "medium",
+                "high",
+                "critical"
+            ]
+        },
+        {
+            "name": "root_cause_details",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "",
+                "The Pan-European AML Action Plan",
+                "TBD",
+                "TBC"
+            ]
+        },
+        {
+            "name": "folder",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Reconciliation flows - remediation (project Care)",
+                "EY Global Anti-Money Laundering, Counter Terrorist Financing and Sanctions Assessment",
+                "Data Retention CEP",
+                "Financial Crime Complinace EPIC"
+            ]
+        },
+        {
+            "name": "folder_type",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "INTERNAL_AUDIT",
+                "SELF_IDENTIFIED",
+                "COMPLIANCE_ASSURANCE",
+                "EXTERNAL_AUDIT"
+            ]
+        },
+        {
+            "name": "folder_description",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "folder_review_link",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "labels",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "TEAM-718",
+                "TEAM-1924",
+                "TPRM",
+                "cep-data-retention-3Q23"
+            ]
+        },
+        {
+            "name": "assignee_status",
+            "type": "varchar",
+            "sample_values": [
+                "active",
+                "terminated",
+                null,
+                "inactive",
+                "gardening_leave"
+            ]
+        },
+        {
+            "name": "reporter_status",
+            "type": "varchar",
+            "sample_values": [
+                "active",
+                "terminated",
+                "inactive",
+                null,
+                "onboarding"
+            ]
+        },
+        {
+            "name": "reviewer_status",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "active",
+                "terminated"
+            ]
+        },
+        {
+            "name": "validator_status",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "legal_entities",
+            "type": "varchar",
+            "sample_values": [
+                "Revolut Ltd",
+                "Revolut Bank UAB",
+                "Revolut Group Holdings Ltd",
+                null,
+                "Revolut Ltd,Revolut NewCo UK Ltd"
+            ]
+        },
+        {
+            "name": "on_hold",
+            "type": "boolean",
+            "sample_values": [
+                false,
+                true
+            ]
+        },
+        {
+            "name": "jira_id",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "assignee_department_type",
+            "type": "varchar",
+            "sample_values": [
+                "TECH_CO",
+                "ENTITY",
+                null
+            ]
+        },
+        {
+            "name": "reporter_department_type",
+            "type": "varchar",
+            "sample_values": [
+                "TECH_CO",
+                "ENTITY",
+                null
+            ]
+        },
+        {
+            "name": "responsible_department_type",
+            "type": "varchar",
+            "sample_values": [
+                "TECH_CO",
+                "ENTITY",
+                null
+            ]
+        },
+        {
+            "name": "reviewer_department_type",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "TECH_CO",
+                "ENTITY"
+            ]
+        },
+        {
+            "name": "validator_department_type",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "number_of_duedate_extensions",
+            "type": "double",
+            "sample_values": [
+                0.0,
+                NaN,
+                1.0,
+                2.0,
+                3.0
+            ]
+        },
+        {
+            "name": "jira_phix_theme",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Governance",
+                "Financial Crime",
+                "Risk",
+                "Consumer Law & TCF"
+            ]
+        },
+        {
+            "name": "jira_issue_status",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Signed Off - Validated",
+                "Signed Off - Not Validated",
+                "Not Required",
+                "Signed Off - In Validation"
+            ]
+        },
+        {
+            "name": "assignee_team_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "assignee_department_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "reporter_team_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "reporter_department_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "reviewer_team_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "reviewer_department_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "validator_team_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "validator_department_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "resolved",
+            "type": "boolean",
+            "sample_values": [
+                true,
+                false
+            ]
+        },
+        {
+            "name": "risk_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "primary_risk_type_l1_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "primary_risk_type_l2_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "risk_types_l1_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "risk_type_ids",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "regulation_url",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "",
+                "https://backoffice.revolut.com/docs/regulations/21870?entity_id=48",
+                "https://backoffice.revolut.com/docs/industry-guidances/21978",
+                "https://backoffice.revolut.com/docs/regulations/21380"
+            ]
+        },
+        {
+            "name": "regulation_has_risk_of_non_compliance",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "false",
+                "true",
+                ""
+            ]
+        },
+        {
+            "name": "regulation_risk_of_non_compliance_description",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "vendor_entities",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Revolut Ltd",
+                "",
+                "Revolut Bank UAB",
+                "Revolut Technologies Inc."
+            ]
+        },
+        {
+            "name": "vendor_relations",
+            "type": "varchar",
+            "sample_values": [
+                "",
+                "Revolut Ltd <-> Revolut Bank UAB",
+                "Lead Bank <-> Revolut Technologies Inc.",
+                "Revolut Ltd <-> Revolut NewCo UK Ltd",
+                "Metropolitan Commercial Bank <-> Revolut Technologies Inc."
+            ]
+        },
+        {
+            "name": "remediation_start_date",
+            "type": "timestamp(6) with time zone",
+            "sample_values": [
+                "NaT",
+                "2025-11-19 23:53:33.612698+00:00",
+                "2024-01-12 08:12:24.342749+00:00",
+                "2024-04-11 11:12:24.426188+00:00",
+                "2025-08-28 08:55:36.023288+00:00"
+            ]
+        },
+        {
+            "name": "remediation_end_date",
+            "type": "timestamp(6) with time zone",
+            "sample_values": [
+                "NaT",
+                "2024-04-15 15:21:27.899612+00:00",
+                "2024-11-18 11:10:29.638824+00:00",
+                "2025-03-31 04:05:23.569761+00:00",
+                "2025-09-29 02:47:16.151327+00:00"
+            ]
+        },
+        {
+            "name": "issue_state_category",
+            "type": "varchar",
+            "sample_values": [
+                "Done",
+                "In Progress",
+                "To Do"
+            ]
+        },
+        {
+            "name": "has_no_linked_assets",
+            "type": "boolean",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "assignee_entity_id",
+            "type": "double",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "assignee_entity",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Revolut Bank UAB",
+                "Revolut NewCo UK Ltd",
+                "Revolut Corporate Services Ltd",
+                "Revolut Technologies Inc."
+            ]
+        },
+        {
+            "name": "related_exam_id",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "stage_level",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Stage 5",
+                "Stage 3",
+                "Stage 0",
+                "Stage 4"
+            ]
+        },
+        {
+            "name": "operating_type",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "RegCo",
+                "TechCo",
+                "HoldCo"
+            ]
+        },
+        {
+            "name": "brm_uuid",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "brm_email",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "brm",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Emma Murphy",
+                "Joshua James Chapman",
+                "Shashank Batra",
+                "Vasileios Douvalis"
+            ]
+        },
+        {
+            "name": "brm_status",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "active",
+                "terminated",
+                "inactive"
+            ]
+        },
+        {
+            "name": "brm_team_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "brm_team",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Services \u00b7 FinCrime \u00b7 Risk Management",
+                "Services \u00b7 CX \u00b7 Risk",
+                "Services \u00b7 Finance \u00b7 Internal Control",
+                "Services \u00b7 Europe Bank \u00b7 Branch \u00b7 Branch Management"
+            ]
+        },
+        {
+            "name": "brm_department_id",
+            "type": "integer",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "brm_department",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "Europe Bank",
+                "FinCrime Product",
+                "CX",
+                "Finance"
+            ]
+        },
+        {
+            "name": "brm_department_type",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "TECH_CO",
+                "ENTITY"
+            ]
+        },
+        {
+            "name": "related_exam_subjects",
+            "type": "varchar",
+            "sample_values": [
+                "",
+                "Fincrime",
+                "Business Model,Compliance,Financial,Fincrime,Governance",
+                "Business Model,IT Security",
+                "Business Model"
+            ]
+        },
+        {
+            "name": "related_exam_regions",
+            "type": "varchar",
+            "sample_values": [
+                "",
+                "EMEA",
+                "US",
+                "UK",
+                "APAC"
+            ]
+        },
+        {
+            "name": "related_exam_name",
+            "type": "varchar",
+            "sample_values": [
+                "",
+                "CNBV audit - Revolut de Mexico - [Nov 24-Feb25]",
+                "ACPR AML Inspection 2025",
+                "ECB OSI Preparation External Audit",
+                "Italy Branch External Audit Deloitte"
+            ]
+        },
+        {
+            "name": "related_exam_examiner",
+            "type": "varchar",
+            "sample_values": [
+                "",
+                "Comisi\u00f3n Nacional Bancaria y de Valores (CNBV)",
+                "ACPR",
+                "European Central Bank (ECB)",
+                "Management Solutions"
+            ]
+        },
+        {
+            "name": "related_exam_examiner_type",
+            "type": "varchar",
+            "sample_values": [
+                "",
+                "Regulatory Agency",
+                "External Auditor",
+                "Government Body"
+            ]
+        },
+        {
+            "name": "primary_risk_residual_score",
+            "type": "varchar",
+            "sample_values": "High cardinality (unique IDs or free-text)"
+        },
+        {
+            "name": "primary_risk_inherent_score",
+            "type": "varchar",
+            "sample_values": [
+                "RED",
+                null,
+                "AMBER",
+                "GREEN"
+            ]
+        },
+        {
+            "name": "primary_risk_is_top_risk",
+            "type": "boolean",
+            "sample_values": [
+                false,
+                true
+            ]
+        },
+        {
+            "name": "closure_sla_exemption_review_result",
+            "type": "varchar",
+            "sample_values": [
+                null,
+                "APPROVED",
+                "PENDING",
+                "REJECTED"
+            ]
+        }
+    ]
+}
